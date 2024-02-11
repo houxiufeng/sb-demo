@@ -1,0 +1,13 @@
+family:
+  name: "fitz home"
+  father:
+    name: "fitz"
+    age: 39
+  mother:
+    alias:
+      - lovely
+      - alice
+  child:
+    name: "vivian"
+    age: 2
+    gender: false
