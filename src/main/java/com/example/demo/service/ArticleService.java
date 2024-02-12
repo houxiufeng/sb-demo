@@ -89,16 +89,36 @@ public class ArticleService {
         }
     }
 
-    public void deleteArticle(long id) {
-        articleJdbcDao.deleteArticle(id);
+    public int deleteArticle(long id) {
+        return articleJdbcDao.deleteArticle(id);
+    }
+
+    public Article getById(long id) {
+        return articleJdbcDao.findById(id);
+    }
+
+    /**
+     * only for mock test
+     * @return
+     */
+    public int getNumber(int n) {
+        System.out.println("cal getNumber");
+        return n + 1;
     }
 
     @Transactional
-    public void updateById(Article article) {
-        articleJdbcDao.updateById(article);
+    public int updateById(Article article) {
+        int n = articleJdbcDao.updateById(article);
         if (2 > 1) {
             throw new RuntimeException("test exception");
         }
+        return n;
+    }
+
+    public int updateById2(Article article) {
+        int n = articleJdbcDao.updateById(article);
+        System.out.println("updateById2");
+        return n;
     }
 
     private Article buildArticle(String author) {

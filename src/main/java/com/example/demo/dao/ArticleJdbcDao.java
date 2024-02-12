@@ -22,13 +22,13 @@ public class ArticleJdbcDao {
         jdbcTemplate.update(sql, article.getAuthor(), article.getTitle(), article.getContent(), article.getCreateTime());
     }
 
-    public void deleteArticle(long id) {
-        jdbcTemplate.update("DELETE FROM article where id = ?", id);
+    public int deleteArticle(long id) {
+        return jdbcTemplate.update("DELETE FROM article where id = ?", id);
     }
 
-    public void updateById(Article article) {
+    public int updateById(Article article) {
         String sql = "UPDATE article SET author =?, title =?, content =?, create_time =? WHERE id = ?";
-        jdbcTemplate.update(sql, article.getAuthor(), article.getTitle(), article.getContent(), article.getCreateTime(), article.getId());
+        return jdbcTemplate.update(sql, article.getAuthor(), article.getTitle(), article.getContent(), article.getCreateTime(), article.getId());
     }
 
     public Article findById(long id) {
