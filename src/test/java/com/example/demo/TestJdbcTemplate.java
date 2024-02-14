@@ -2,7 +2,6 @@ package com.example.demo;
 
 import com.example.demo.dao.ArticleJdbcDao;
 import com.example.demo.entity.Article;
-import com.example.demo.entity.Reader;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,7 @@ import java.util.List;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class TestDao {
+public class TestJdbcTemplate {
 
     @Autowired
     private ArticleJdbcDao articleJdbcDao;

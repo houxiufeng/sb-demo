@@ -9,6 +9,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * jdbcTemplate的实现方式
+ */
 @Repository
 @Slf4j
 public class ArticleJdbcDao {

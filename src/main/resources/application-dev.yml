@@ -11,6 +11,13 @@ spring:
     username: root
     password: ~Yagamihxf0
 
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+
 author: houxiufeng
 my:
   first-name: hou

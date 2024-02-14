@@ -45,6 +45,7 @@
 			<version>23.0</version>
 		</dependency>
 
+		<!-- jdbcTemplate -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
@@ -68,6 +69,13 @@
 			<artifactId>mockito-inline</artifactId>
 			<version>3.8.0</version>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>3.5.5</version>
 		</dependency>
 	</dependencies>
 

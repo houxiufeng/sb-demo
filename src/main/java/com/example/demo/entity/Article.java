@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.example.demo.common.JacksonUtil;
 import com.google.common.collect.Lists;
 import lombok.AllArgsConstructor;
@@ -21,6 +22,8 @@ public class Article {
     private String content;
     private Date createTime;
 
+
+    @TableField(exist=false)
     private List<Reader> reader;
 
     public static void main(String[] args) {
