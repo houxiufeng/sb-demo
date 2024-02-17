@@ -28,29 +28,9 @@ public class TestArticleService {
 //        articleService.testTransactional5();
         articleService.testTransactional6();
     }
-//    @Test
-//    public void testUpdate() {
-//        Article article = Article.builder()
-//                .id(1L)
-//                .author("fitz")
-//                .content("spring boot 从青铜到王者")
-//                .createTime(new Date())
-//                .title("springboot study")
-//                .build();
-//        articleJdbcDao.updateById(article);
-//    }
-//    @Test
-//    public void testDelete() {
-//        articleJdbcDao.deleteArticle(1L);
-//    }
-//    @Test
-//    public void testFindById() {
-//        Article article = articleJdbcDao.findById(2L);
-//        System.out.println(article);
-//    }
-//    @Test
-//    public void testFindAll() {
-//        List<Article> articles = articleJdbcDao.findAll();
-//        articles.forEach(System.out::println);
-//    }
+    @Test
+    public void testFindById() {
+        Article article = articleService.getById(1L);
+        System.out.println(article);
+    }
 }

@@ -9,6 +9,8 @@ import java.util.stream.Collectors;
 
 /**
  * BiPredicate 和 Predicate 函数接口一样，都是返回一个布尔类型，唯一不同的是 Predicate 接受一个参数，而 BiPredicate 可以接受两个不同类型的参数。
+ * https://www.wdbyte.com/java8/java8-bipredicate/
+ * 异步service: https://www.bilibili.com/video/BV1VT4y1h7Rm/?vd_source=a829e69232988cd1691360547865a27a
  */
 
 public class Java8FunctionBiPredicateParams {

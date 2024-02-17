@@ -1,8 +1,9 @@
 package com.example.demo.service;
 
+import com.example.demo.annotation.Mylog;
 import com.example.demo.dao.ArticleJdbcDao;
 import com.example.demo.entity.Article;
-import com.example.demo.entity.Reader;
+import com.example.demo.mapper.ArticleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,6 +16,8 @@ import java.util.List;
 public class ArticleService {
     @Autowired
     private ArticleJdbcDao articleJdbcDao;
+    @Autowired
+    private ArticleMapper articleMapper;
 
     //https://juejin.cn/post/6844904096747503629
 
@@ -93,8 +96,11 @@ public class ArticleService {
         return articleJdbcDao.deleteArticle(id);
     }
 
+    @Mylog(level = 2, value = "test annotation in getById")
     public Article getById(long id) {
-        return articleJdbcDao.findById(id);
+//        int a = 10/0;
+//        return articleJdbcDao.findById(id);
+        return articleMapper.selectById(id);
     }
 
     /**
