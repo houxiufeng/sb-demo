@@ -21,3 +21,6 @@ mybatis-plus:
 author: houxiufeng
 my:
   first-name: hou
+
+animal:
+  name: cat

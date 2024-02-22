@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 /**
  * 全局统一处理返回值
+ * 注意：如果controller返回值是string, 默认会调用stringconvert, 所以会报类型转化异常错误
  */
 @Component
 @ControllerAdvice

@@ -82,6 +82,13 @@
 			<artifactId>mybatis-plus-boot-starter</artifactId>
 			<version>3.5.5</version>
 		</dependency>
+
+		<!-- 自定义组件测试 -->
+		<dependency>
+			<groupId>com.home</groupId>
+			<artifactId>early-bird</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
